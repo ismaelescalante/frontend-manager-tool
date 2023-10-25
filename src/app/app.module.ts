@@ -1,9 +1,7 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {ButtonModule} from 'primeng/button'
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -12,7 +10,6 @@ import {ButtonModule} from 'primeng/button'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
