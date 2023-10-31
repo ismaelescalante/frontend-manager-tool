@@ -1,10 +1,10 @@
 import { RouterModule, Routes } from '@angular/router';
 
-import { LayoutComponent } from './layout/layout.component';
+import { LoginComponent } from '../auth/login/login.component';
 import { NgModule } from '@angular/core';
 
 const routes: Routes = [
-  
+ 
 ];
 
 @NgModule({
