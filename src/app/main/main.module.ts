@@ -3,13 +3,11 @@ import { LayoutComponent } from './layout/layout.component';
 import { MainRoutingModule } from './main-routing.module';
 import { NgModule } from '@angular/core';
 import { PrimengModule } from '../primeng/primeng.module';
-import { SharedModule } from 'primeng/api';
-import { SidebarComponent } from '../shared/menu/sidebar/sidebar.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
     LayoutComponent,
-    SidebarComponent,
   ],
   imports: [
     CommonModule,
