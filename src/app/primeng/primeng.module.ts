@@ -1,5 +1,6 @@
 import { ButtonModule } from 'primeng/button'
 import { CommonModule } from '@angular/common';
+import { DragDropModule } from 'primeng/dragdrop';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -9,7 +10,8 @@ import { NgModule } from '@angular/core';
     CommonModule
   ],
   exports: [
-    ButtonModule
+    ButtonModule,
+    DragDropModule
   ]
 })
 export class PrimengModule { }

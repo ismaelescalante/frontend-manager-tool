@@ -4,10 +4,12 @@ import { MainRoutingModule } from './main-routing.module';
 import { NgModule } from '@angular/core';
 import { PrimengModule } from '../primeng/primeng.module';
 import { SharedModule } from '../shared/shared.module';
+import { ItineraryComponent } from './features/itinerary/itinerary.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
+    ItineraryComponent,
   ],
   imports: [
     CommonModule,
