@@ -7,52 +7,5 @@
     border-radius: 15px;
     box-shadow: 0px 0px 2px 2px rgba(73, 73, 73, 0.02);
     
-    h2 {
-        margin-left: 7%;
-        margin-top: 7%;
-    }
-
-    .category-wrapper {
-        display: flex;
-        flex-wrap: wrap; 
-        display: flex;
-        height: 50vh;        
-    }
 }
 
-#bloque-rojo,
-#bloque-azul,
-#bloque-naranja {
-    margin-left: 20px;
-    font-size: 30px;
-    transition: transform 0.3s;
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: 70%;
-
-    &.bloque-rojo {
-        background-image: url(../../../assets/bloque-rojo.png);
-    }
-
-    &.bloque-azul {
-        background-image: url(../../../assets/bloque-azul.png);
-    }
-
-    &.bloque-naranja {
-        background-image: url(../../../assets/bloque-naranja.png);
-    }
-
-    h5 {
-        margin-left: 20px;
-        margin-bottom: 20px;
-    }
-
-    &:hover {
-        transform: scale(1.25);
-        cursor: pointer;
-    }
-
-}

@@ -1,0 +1,45 @@
+<div class="container">
+  <div>
+    <h2 class="ml-6 mt-7">Hola, máquina</h2>
+  </div>
+
+  <div class="category-wrapper">
+    <div id="bloque-azul" class="bloque-azul">
+      <h5 class="ml-5">Teoría</h5>
+      <h5 class="ml-5">5/30 <i class="pi pi-arrow-circle-right" style="font-size: 1.5rem"></i></h5>
+
+
+    </div>
+    <div id="bloque-rojo" class="bloque-rojo">
+      <h5 class="ml-5">Vídeos</h5>
+      <h5 class="ml-5">27/97 <i class="pi pi-arrow-circle-right" style="font-size: 1.5rem"></i></h5>
+    </div>
+    <div id="bloque-naranja" class="bloque-naranja">
+      <h5 class="ml-5">Ejercicios</h5>
+      <h5 class="ml-5">3/10 <i class="pi pi-arrow-circle-right" style="font-size: 1.5rem"></i></h5>
+    </div>
+
+  </div>
+
+  <div class="formador-info">
+    <div class="ml-4">
+      <p>Tu formador/a:</p>
+
+      <div class="formador-details">
+        <img src="../../../assets/formador-photo.jpg" alt="Foto del formador">
+
+        <div>
+          <h5>Nombre del formador</h5>
+          <p>Senior Frontend Developer</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="progreso">
+      <p>Progreso total de formación</p>
+      <p-knob [(ngModel)]="value" [readonly]="true" textColor="black"></p-knob>
+    </div>
+  </div>
+
+</div>

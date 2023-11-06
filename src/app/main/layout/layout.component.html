@@ -1,24 +1,6 @@
 <div class="flex flex-row">
-  <app-sidebar class="w-2 text-center"></app-sidebar>
+  <app-sidebar class="w-2 mr-2"></app-sidebar>
   <div class="content flex flex-column w-full mr-5 mt-5">
-    <div>
-      <h2 class="ml-7 mt-7">Hola, máquina</h2>
-    </div>
-
-    <div class="category-wrapper">
-      <div id="bloque-azul" class="bloque-azul">
-        <h5>Teoría</h5>
-        <h5>5/30</h5>
-      </div>
-      <div id="bloque-rojo" class="bloque-rojo">
-        <h5 class="ml-5">Vídeos</h5>
-        <h5 class="ml-5">27/97</h5>
-      </div>
-      <div id="bloque-naranja" class="bloque-naranja">
-        <h5 class="ml-5">Ejercicios</h5>
-        <h5 class="ml-5">3/10</h5>
-      </div>
-    </div>
-    
+    <router-outlet></router-outlet>
   </div>
 </div>
