@@ -1,0 +1,43 @@
+<div class="flex justify-content-around p-7">
+    <div class="p-2 border-1 surface-border border-round w-15rem">
+        <p class="text-center surface-border border-bottom-1">HTML & CSS</p>
+        <ul class="list-none flex flex-column gap-2 p-0 m-0">
+            <li *ngFor="let task of tasks" class="p-2 border-round shadow-1" pDraggable (onDragStart)="dragStart(task)" (onDragEnd)="dragEnd()">
+                {{task.name}}
+            </li>
+        </ul>
+    </div>
+    <div class="p-2 border-1 surface-border border-round w-15rem" pDroppable (onDrop)="drop('todo')">
+        <p class="text-center surface-border border-bottom-1">To Do</p>
+        <ul class="list-none flex flex-column gap-2 p-0 m-0">
+            <li *ngFor="let task of todoTasks" class="p-2 border-round shadow-1" pDraggable (onDragStart)="dragStart(task)" (onDragEnd)="dragEnd()">
+                {{task.name}}
+            </li>
+        </ul>
+       
+    </div>
+    <div class="p-2 border-1 surface-border border-round w-15rem" pDroppable (onDrop)="drop('inProgress')">
+        <p class="text-center surface-border border-bottom-1">In progress</p>
+        <ul class="list-none flex flex-column gap-2 p-0 m-0">
+        <li *ngFor="let task of inProgressTasks" class="p-2 border-round shadow-1" pDraggable (onDragStart)="dragStart(task)" (onDragEnd)="dragEnd()">
+            {{task.name}}
+        </li>
+        </ul>
+    </div>
+    <div class="p-2 border-1 surface-border border-round w-15rem" pDroppable (onDrop)="drop('toBeReviewed')">
+        <p class="text-center surface-border border-bottom-1">To be reviewed</p>
+        <ul class="list-none flex flex-column gap-2 p-0 m-0">
+          <li *ngFor="let task of toBeReviewedTasks" class="p-2 border-round shadow-1" pDraggable (onDragStart)="dragStart(task)" (onDragEnd)="dragEnd()">
+            {{task.name}}
+          </li>
+        </ul>
+    </div>
+    <div class="p-2 border-1 surface-border border-round w-15rem" pDroppable (onDrop)="drop('done')">
+        <p class="text-center surface-border border-bottom-1">Done</p>
+        <ul class="list-none flex flex-column gap-2 p-0 m-0">
+            <li *ngFor="let task of doneTasks" class="p-2 border-round shadow-1" pDraggable (onDragStart)="dragStart(task)" (onDragEnd)="dragEnd()">
+                {{task.name}}
+            </li>
+        </ul>
+    </div>
+</div>
