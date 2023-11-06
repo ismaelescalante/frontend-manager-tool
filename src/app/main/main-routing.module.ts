@@ -1,10 +1,14 @@
 import { RouterModule, Routes } from '@angular/router';
 
-import { LoginComponent } from '../auth/login/login.component';
 import { NgModule } from '@angular/core';
 import { ItineraryComponent } from './features/itinerary/itinerary.component';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 
 const routes: Routes = [
+  {
+    path: "",
+    component: DashboardComponent
+  }
  {path: 'itinerario', component: ItineraryComponent }
 ];
 

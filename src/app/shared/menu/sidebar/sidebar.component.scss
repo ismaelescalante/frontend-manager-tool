@@ -1,3 +1,13 @@
+.sidebar-wrapper {
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+}
+
 .logo{
     width: 40px;
     height: 40px;
@@ -8,5 +18,10 @@
     height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between  ;
+    justify-content: space-between;
+
+    .list {
+        display: flex;
+        flex-direction: column;
+    }
 }
