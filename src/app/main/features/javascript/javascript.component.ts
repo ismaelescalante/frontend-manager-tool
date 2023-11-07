@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-
-import { Task } from './task.interface';
+import { Component } from '@angular/core';
+import { Task } from '../../../models/task.interface';
 
 @Component({
-  selector: 'app-itinerary',
-  templateUrl: './itinerary.component.html',
-  styleUrls: ['./itinerary.component.scss']
+  selector: 'app-javascript',
+  templateUrl: './javascript.component.html',
+  styleUrls: ['./javascript.component.scss']
 })
-export class ItineraryComponent implements OnInit {
+export class JavascriptComponent {
   public tasks: Task[] | undefined;
   public todoTasks: Task[] = [];
   public inProgressTasks: Task[] = [];

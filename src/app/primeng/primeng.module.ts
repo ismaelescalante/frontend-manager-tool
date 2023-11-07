@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DragDropModule } from 'primeng/dragdrop';
 import { KnobModule } from 'primeng/knob';
 import { NgModule } from '@angular/core';
+import { PanelMenuModule } from 'primeng/panelmenu';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { NgModule } from '@angular/core';
   exports: [
     ButtonModule,
     DragDropModule,
-    KnobModule
+    KnobModule,
+    PanelMenuModule
   ]
 })
 export class PrimengModule { }
