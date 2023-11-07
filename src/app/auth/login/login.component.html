@@ -2,12 +2,12 @@
     <div class="login w-4 p-7 border-round flex flex-column align-items-center">
         <img src="../../../assets/solo-n.png" class="logo mt-3 ml-2">
         <h1 class="text-bluegray-600 mt-5">Login</h1>
-        <form class="flex flex-column mt-2 w-4" [formGroup]="loginForm">
+        <form class="flex flex-column mt-2 w-4" [formGroup]="loginForm!">
             <label class="mb-3 text-xl">Email</label>
             <input type="text" class="mb-3 h-2rem outline-none text-lg" formControlName="email">
             <label class="mb-3 text-xl">Contraseña</label>
             <input type="password" class="mb-3 h-2rem outline-none text-lg" formControlName="password">
-            <button pButton class="p-button-info mt-5 text-xl cursor-pointer" (click)="onSubmit()">Login</button>
+            <button pButton class="p-button-primary mt-5 text-xl cursor-pointer" (click)="onSubmit()">Login</button>
         </form>
     </div>
 

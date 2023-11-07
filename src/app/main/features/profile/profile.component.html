@@ -1,0 +1,31 @@
+
+<div class="container">
+
+  <h2>Hola máquina, aquí puedes modificar tu información</h2>
+
+
+  <div class="profile-details">
+
+    <h5>Nombre:</h5>
+    <p>{{this.name}}</p>
+    <h5>Apellidos:</h5>
+    <p>{{this.lastName}}</p>
+    <h5>Email:</h5> 
+    <p>{{this.email}}</p>
+    
+  </div>
+
+  <form class="form-container">
+
+    <label class="mb-2" htmlFor="github">{{ "Repositorio de Github:" }}</label>
+    <input type="text" pInputText formControlName="github" />
+    <label class="mb-2" htmlFor="html">{{ "Certificación HTML5 y CSS:" }}</label>
+    <input type="text" pInputText formControlName="html" />
+    <label class="mb-2" htmlFor="javascript">{{ "Certificación JavaScript:" }}</label>
+    <input type="text" pInputText formControlName="javascript" />
+
+    <p-button type="button" class="align-self-center"><i
+        class="pi pi-save mr-2"></i> Guardar</p-button>
+  </form>
+
+</div>
