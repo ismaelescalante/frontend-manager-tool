@@ -1,25 +1,46 @@
-import { Component, inject } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-import { LoginService } from './services/login.service';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import { FormService } from 'src/app/shared/services/form.service';
+import { Subject, takeUntil } from 'rxjs';
+import { User } from 'src/app/models/user.interface';
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent {
-  private _fb = inject(FormBuilder)
-  private _loginService = inject(LoginService)
-  private _router = inject(Router)
-  
-  public loginForm: FormGroup = this._fb.group({
-    email: ['', Validators.required],
-    password: ['', [Validators.required]],
-});
+export class LoginComponent implements OnInit, OnDestroy {
+  public loginForm?: FormGroup;
 
-  onSubmit(){
-    this._loginService.login(this.loginForm.value).subscribe(() => this._router.navigate(['/']))
+  private _authService = inject(AuthService);
+  private _fb = inject(FormService);
+  private _router = inject(Router);
+  private _unsubscribe$ = new Subject<boolean>();
+
+  ngOnInit(): void {
+    this.loginForm = this._fb.createLoginForm()
+  }
+
+  getLoginForm() {
+    this.loginForm = this._fb.createLoginForm();
+  }
+
+  onSubmit() {
+    const user: User = {
+      email: this.loginForm!.get('email')?.value,
+      password : this.loginForm!.get('password')?.value,
+    };
+
+    this._authService
+      .login(user)
+      .pipe(takeUntil(this._unsubscribe$))
+      .subscribe(() => this._router.navigate(['/']));
+  }
+
+  ngOnDestroy(): void {
+    this._unsubscribe$.next(true), this._unsubscribe$.complete();
   }
 }
