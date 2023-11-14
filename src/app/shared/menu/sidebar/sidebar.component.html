@@ -8,6 +8,7 @@
       <div class="list">
         <ul class="list-none mr-6 mt-5 text-center">
           <li
+            [routerLink]="['/']"
             class="mb-4 text-xl cursor-pointer transition transition-duration-300 hover:text-blue-700" 
           >
             <i class="pi pi-home mr-2 text-xl"></i>Inicio
@@ -15,18 +16,19 @@
           <li
             class="mb-4 text-xl cursor-pointer transition transition-duration-300 hover:text-blue-700"
           >
-            <i class="pi pi-compass mr-2 text-xl"></i>Itinerario
+            <p-panelMenu [model]="courses"></p-panelMenu>
           </li>
           <li
             class="mb-4 text-xl cursor-pointer transition transition-duration-300 hover:text-blue-700"
           >
-            <i class="pi pi-pencil mr-2 text-lg"></i>Ejercicios
+            <!-- <i class="pi pi-pencil mr-2 text-lg"></i>Ejercicios -->
+            <p-panelMenu [model]="exercises"></p-panelMenu>
           </li>
         </ul>
       </div>
         
       <div class="mb-8 flex flex-column align-items-center">
-        <span class="text-xl cursor-pointer transition transition-duration-300 hover:text-blue-700">
+        <span [routerLink]="['/perfil/1']" class="text-xl cursor-pointer transition transition-duration-300 hover:text-blue-700">
           <i class="pi pi-user mr-2 text-xl "></i>Mi perfil
       </span>
       <hr class="w-10">

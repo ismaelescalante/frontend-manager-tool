@@ -5,3 +5,48 @@ html, body{
     background-color: #f0f4f9;
     margin: 0px;
 }
+
+.p-panelmenu .p-panelmenu-header .p-panelmenu-header-content {
+    border: none;
+    background-color: #f0f4f9;
+    margin-left: 25px;
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+
+.p-panelmenu:hover  {
+    background-color: #f0f4f9;
+}
+
+
+.p-panelmenu .p-menuitem-text{
+    color: black;
+    font-weight: 450;
+    font-size: 1.25rem;
+}
+
+
+.pi-compass{
+    font-size: 1.3rem;
+    color: rgb(39, 39, 39);
+}
+
+.pi-pencil{
+    font-size: 1.3rem;
+    color: rgb(39, 39, 39);
+}
+
+.pi-submenu-icon{
+    display: none;
+}
+
+.p-panelmenu .p-panelmenu-header .p-panelmenu-header-content .p-panelmenu-header-action .p-submenu-icon{
+    display: none;
+}
+
+.p-panelmenu .p-panelmenu-content{
+    background-color: #f0f4f9;
+    border: none;
+    width: 100%;
+    margin-left: 20px;
+}

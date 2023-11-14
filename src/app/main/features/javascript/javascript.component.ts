@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-
-import { Task } from './task.interface';
+import { Component } from '@angular/core';
+import { Task } from '../../../models/task.interface';
 
 @Component({
-  selector: 'app-itinerary',
-  templateUrl: './itinerary.component.html',
-  styleUrls: ['./itinerary.component.scss'],
+  selector: 'app-javascript',
+  templateUrl: './javascript.component.html',
+  styleUrls: ['./javascript.component.scss']
 })
-export class ItineraryComponent implements OnInit {
+export class JavascriptComponent {
   public tasks: Task[] | undefined;
   public todoTasks: Task[] = [];
   public inProgressTasks: Task[] = [];
@@ -16,10 +15,7 @@ export class ItineraryComponent implements OnInit {
   public draggedTask: Task | undefined | null;
 
   ngOnInit() {
-    this.tasks = [
-      { id: 1, name: 'Hola' },
-      { id: 2, name: 'Buenas' },
-    ];
+    this.tasks = [{ id: 1, name: 'Hola' }, { id: 2, name: 'Buenas' }];
   }
 
   dragStart(task: Task) {
@@ -28,8 +24,6 @@ export class ItineraryComponent implements OnInit {
 
   drop(container: string) {
     if (this.draggedTask) {
-      this.removeFromOriginalContainer(this.draggedTask);
-
       const draggedProductIndex = this.findIndex(this.draggedTask);
       if (container === 'todo') {
         this.todoTasks = [...this.todoTasks, this.draggedTask];
@@ -47,15 +41,6 @@ export class ItineraryComponent implements OnInit {
 
   dragEnd() {
     this.draggedTask = null;
-  }
-
-  removeFromOriginalContainer(task: Task) {
-    this.todoTasks = this.todoTasks.filter((t) => t.id !== task.id);
-    this.inProgressTasks = this.inProgressTasks.filter((t) => t.id !== task.id);
-    this.toBeReviewedTasks = this.toBeReviewedTasks.filter(
-      (t) => t.id !== task.id
-    );
-    this.doneTasks = this.doneTasks.filter((t) => t.id !== task.id);
   }
 
   findIndex(task: Task) {
