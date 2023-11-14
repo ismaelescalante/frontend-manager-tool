@@ -15,7 +15,7 @@
     
   </div>
 
-  <form class="form-container">
+  <form class="form-container" [formGroup]="userLinksForm!">
 
     <label class="mb-2" htmlFor="github">{{ "Repositorio de Github:" }}</label>
     <input type="text" pInputText formControlName="github" />
@@ -24,7 +24,7 @@
     <label class="mb-2" htmlFor="javascript">{{ "Certificación JavaScript:" }}</label>
     <input type="text" pInputText formControlName="javascript" />
 
-    <p-button type="button" class="align-self-center"><i
+    <p-button type="button" (onClick)="saveLinks()" class="align-self-center"><i
         class="pi pi-save mr-2"></i> Guardar</p-button>
   </form>
 

@@ -34,11 +34,16 @@ export class ProfileComponent implements OnInit{
   }
 
   getProfileForm() {
-    this._fb.createProfileForm();
+    this.userLinksForm = this._fb.createProfileForm();
     this.userLinksForm?.patchValue({
       github: this.github,
       html: this.html,
       javascript: this.javascript
     })
+  }
+
+
+  saveLinks() {
+    
   }
 }
