@@ -2,6 +2,7 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of, switchMap, throwError } from 'rxjs';
 import { User } from 'src/app/models/user.interface';
+import {jwtDecode}from 'jwt-decode';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -26,18 +27,26 @@ export class AuthService {
 
           if (user !== null && user !== undefined) {
             this._authStatus$.next(user);
-            this._user = user;
-            return of(user);
+            this._user = jwtDecode(token!)
+            localStorage.setItem("token", token!)
+            return of(this._user);
           } else {
             // If the user is null or undefined
             return throwError('Invalid user response');
           }
-        })
-      );
+          })
+        );
   }
 
   get currentUser(): User | undefined {
     if (!this._user) return undefined;
-    return structuredClone(this._user);
+    return jwtDecode(localStorage.getItem("token")!)
+  }
+
+  logout() {
+
+    this._user = undefined;
+    localStorage.removeItem("token")
+
   }
 }
