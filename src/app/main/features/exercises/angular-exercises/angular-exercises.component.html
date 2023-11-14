@@ -1,1 +1,49 @@
-<p>angular-exercises works!</p>
+<div class="p-5">
+  <h1 class="text-center">Ejercicios Angular</h1>
+  <hr />
+
+  <h3>Display/Hide</h3>
+  <img class="border-1" src="../../../../../assets/display-hide.gif" alt="" />
+
+  <h3>Component Communication</h3>
+  <p>
+    En el "component communication" los tres métodos de comunicación deben ser
+    totalmente independentes: quiero con esto decir que si en tu html tienes
+    algo como: <br />
+    <br />
+    &lt;app-child [message]="messageToChild"&gt;&lt;/app-child&gt; <br />
+    <br />
+    Al remover el input 'message' <br />
+    <br />
+    &lt;app-child&gt;&lt;/app-child&gt; <br /> <br>
+    El único método que debería dejar de funcionar sería el de "comunicación por
+    input", los demás 2 deberían seguir funcionando y también ellos deberían ser
+    independientes uno del otro. Esto porque queremos que sepáis cómo hacer
+    comunicación de distintas maneras y en qué casos una es mejor que la otra.
+  </p>
+  <img class="border-1" src="../../../../../assets/component.gif" alt="" />
+
+  <h3>Crud</h3>
+  <img class="border-1" src="../../../../../assets/crud.gif" alt="" />
+
+  <h3>Search on Type</h3>
+  <img class="border-1" src="../../../../../assets/search.gif" alt="" />
+
+  <h3>Light Switch</h3>
+  <p>
+    En el ejercicio de del semáforo se espera que tengáis un componente padre y 2
+    componentes hijo "TraficLightComponent" y "ControllerComponent" para que
+    podáis practicar la comunicación desde dos componentes distintos en que uno
+    emite eventos y el otro pueda reaccionar a ellos (idealmente usar
+    observables).
+  </p>
+  <img class="border-1" src="../../../../../assets/switch.gif" alt="" />
+
+  <h3>Graph</h3>
+  <p>Crea dos gráficas usando datos de una API pública y una librería de tu elección.</p>
+  <img class="border-1 w-5" src="../../../../../assets/graph.png" alt="" />
+
+  <h3>Counter</h3>
+  <p>Intenta implementar toda la funcionalidad exclusivamente usando RxJs.</p>
+  <img class="border-1" src="../../../../../assets/counter.gif" alt="" />
+</div>
